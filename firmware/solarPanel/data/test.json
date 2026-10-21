@@ -1,0 +1,31 @@
+{
+    "description": "Test blink",
+    "sampling_duration":10,
+    "entries": [
+      {"ts": 20, "value": 1024},
+      {"ts": 40, "value": 3096},
+      {"ts": 60, "value": 1024},
+      {"ts": 80, "value": 3096},
+      {"ts": 100, "value": 1024},
+      {"ts": 120, "value": 3096},
+      {"ts": 140, "value": 1024},
+      {"ts": 160, "value": 3096},
+      {"ts": 180, "value": 1024},
+      {"ts": 200, "value": 3096},
+      {"ts": 220, "value": 1024},
+      {"ts": 240, "value": 3096},
+      {"ts": 260, "value": 1024},
+      {"ts": 280, "value": 3096},
+      {"ts": 300, "value": 1024},
+      {"ts": 320, "value": 3096},
+      {"ts": 340, "value": 1024},
+      {"ts": 360, "value": 3096},
+      {"ts": 380, "value": 1024},
+      {"ts": 400, "value": 3096},
+      {"ts": 420, "value": 1024},
+      {"ts": 440, "value": 3096},
+      {"ts": 460, "value": 1024},
+      {"ts": 480, "value": 3096},
+      {"ts": 500, "value": 1024}
+    ]
+}

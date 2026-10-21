@@ -1,0 +1,18 @@
+{
+  "description": "Test \u00e9clairage",
+  "sampling_duration": 25,
+  "entries": [
+    {
+      "ts": 0,
+      "value": 1024
+    },
+    {
+      "ts": 5000,
+      "value": 2048
+    },
+    {
+      "ts": 10000,
+      "value": 4096
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pico WebSocket Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><span class="icon">☀️</span>Solar Test Bench<span class="icon">☀️</span></h1>
+    </header>
+
+    <section id="controls">
+        <h2>I/O</h2>
+        <button id="toggleLED">Toggle LED</button>
+        <button id="calibration">Calibration</button>
+        <button id="luxRead">Lux Read</button>
+        <div id="luxDisplay" style="margin-top: 10px; font-weight: bold; font-size: 1.2em;">-- lux</div>
+        <div id="currentCalibration" class="current-sequence" style="display: none;">
+            <h3>Running calibration</h3>
+            <div class="sequence-name" id="currentcalValue">--</div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBarCal"></div>
+                <span class="progress-text" id="progressCalText">0%</span>
+            </div>
+        </div>
+        <div class="pwm-control">
+            <label for="pwm">Manual PWM duty cycle:</label>
+            <input type="number" id="pwmValue" min="0" max="4095">
+            <input type="range" id="pwmSlider" min="0" max="4095">
+        </div>
+        <div class="pwm-control">
+            <label for="pwm">Manual Fan 0 speed control:</label>
+            <input type="number" id="fan0Value" min="0" max="511">
+            <input type="range" id="fan0Slider" min="0" max="511">
+        </div>
+        <div class="pwm-control">
+            <label for="pwm">Manual Fan 1 speed control:</label>
+            <input type="number" id="fan1Value" min="0" max="511">
+            <input type="range" id="fan1Slider" min="0" max="511">
+        </div>
+
+        <hr>
+
+        <div id="seqList"></div>
+
+        <div id="currentSequence" class="current-sequence" style="display: none;">
+            <h3>Running Sequence</h3>
+            <div class="sequence-name" id="currentSeqName">--</div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+                <span class="progress-text" id="progressText">0%</span>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="logs">
+        <h2>Log</h2>
+        <span id="connection-status" class="disconnected">Not Connected</span>
+        <div id="logBox"></div>
+    </section>
+
+    <section id="fileManager">
+        <h2>Files</h2>
+        <div id="dropZone">Drag & drop a file here</div>
+        <progress id="uploadProgress" value="0" max="100"></progress>
+        <ul id="fileList"></ul>
+        <div id="fsInfo">size…</div>
+    </section>
+
+</body>
+
+</html>

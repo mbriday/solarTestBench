@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #ffcc00;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+section {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* I/O */
+
+button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+button.active {
+    background-color: #ff6600;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.pwm-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#pwmValue {
+    width: 60px;
+}
+
+
+/* Drag-and-drop area for files. */
+
+#dropZone {
+    border: 2px dashed #008CBA;
+    padding: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#uploadProgress {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* file list table */
+
+
+.file-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.file-table th,
+.file-table td {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+    text-align: center;
+}
+
+.file-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.filename {
+    text-align: left;
+    cursor: pointer;
+}
+
+.size, .duration, .check, .run, .action {
+    width: 10%;
+}
+
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td:nth-child(1) {
+    width: 50%; 
+}
+
+td:nth-child(2) {
+    width: 25%; 
+}
+
+td:nth-child(3) {
+    width: 25%; 
+    text-align: center;
+} */
+
+/* 'Trash' button */
+
+.trash-button, .check-button, .run-button {
+    background: none;
+    border: none;       /* Remove the border */
+    cursor: pointer;    /* Interactive cursor */
+    font-size: 1.2em;   /* Icon size */
+    transition: color 0.3s ease-in-out;
+}
+
+.trash-button:hover {
+    color: darkred; 
+}
+
+/* .check-button {
+    color: green;
+}
+
+.run-button {
+    color: blue;
+} */
+
+/* logs  */
+
+#logBox {
+    background: black;
+    color: lime;
+    font-family: monospace;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* status related part (with logs) */
+
+#connection-status {
+    font-size: 0.8em;
+    margin-left: 10px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.connected {
+    color: darkgreen;
+}
+
+.disconnected {
+    color: darkred;
+}
+
+/* Current sequence display */
+
+.current-sequence {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border: 2px solid #008CBA;
+    border-radius: 8px;
+}
+
+.current-sequence h3 {
+    margin-top: 0;
+    color: #005f73;
+}
+
+.sequence-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.progress-container {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    transition: width 0.3s ease;
+    border-radius: 15px;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
