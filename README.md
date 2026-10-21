@@ -10,5 +10,5 @@ A programmable LED illumination bench for testing solar panels used in low-power
 
 ## Repository structure
 
-- `board/`: KiCad files for the main PCB.
+- `board/`: KiCad files for the main PCB. See `board/README.md` for modifications done after the first PCB batch.
 - `firmware/`: Arduino firmware for the Pico W. See the `.ino` file for dependencies and setup instructions.
